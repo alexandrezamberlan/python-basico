@@ -1,6 +1,7 @@
 IDES para Python
 1) PyCharm: completa para Python-Django - intellisense; compilar em tempo de programação; autocorreção; execução na ferramenta
     - para alunos/professores com email edu.ufn.br é possível baixá-la gratuitamente
+    - já vem com o PIP
 
 2) VSCode com as extensões para Python instaladas
 
