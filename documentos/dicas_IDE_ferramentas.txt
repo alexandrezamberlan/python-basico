@@ -22,3 +22,8 @@ APLICATIVOS/FERRAMENTAS NECESSÁRIAS EM SUAS MÁQUINAS:
 2) GIT no terminal: 
 3) PIP (Python Install Package)
 4) DEPOIS QUE O PIP ESTIVER INSTALADO, INSTALAR: virtualenv
+    Windows
+    - python3 -m venv venv -> SUBSTITUIR virtualenv -p python3 venv POR ESTE
+    - Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    - venv\Scripts\activate -> ATIVAÇÃO DA VENV
+   
