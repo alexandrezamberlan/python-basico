@@ -1,0 +1,31 @@
+git clone endereço - para clonar um projeto
+
+git pull - para atualizar o projeto localmente a partir do servidor
+git pull origin master - atualiza o branch master no diretório do projeto
+
+
+git branch atualizacao01 - criando um ramo com o nome atualizacao01 (por exemplo)
+
+git checkout atualizacao01 - localmente, trocou-se o foco dos arquivos para atualizacao01
+
+===================
+
+depois das atualizações localmente
+
+git status - verifica a situação do servidor e da máquina local
+
+git add . - adiciona as alterações
+
+git commit -a -m "Mensagem com a explicação do que foi alterado"
+
+git push origin atualizacao01 - envia para o servidor as atualizações criadas
+
+git branch -l - listar todos os branch do projeto
+
+git merge nomeBranchASerTrazido - mescla um branch para o master
+
+git branch -d nomeBranch - remove o branch
+
+git push origin :nomeBranch - executado depois do remover para retirar do servidor
+
+
