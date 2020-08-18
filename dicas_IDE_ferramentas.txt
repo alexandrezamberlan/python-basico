@@ -1,0 +1,23 @@
+IDES para Python
+1) PyCharm: completa para Python-Django - intellisense; compilar em tempo de programação; autocorreção; execução na ferramenta
+    - para alunos/professores com email edu.ufn.br é possível baixá-la gratuitamente
+
+2) VSCode com as extensões para Python instaladas
+
+3) Sublime com as extensões para Python instaladas
+
+
+QUEM ESTÁ COMEÇANDO AGORA PROGRAMAR PYTHON-DJANGO NO WINDOWS 10
+1) baixar e instalar o Python da loja Microsoft
+2) baixar e instalar o PyCharm ou VSCode
+
+
+QUEM ESTÁ COMEÇANDO AGORA PROGRAMAR PYTHON-DJANGO NO LINUX
+1) usar o apt-get
+
+
+APLICATIVOS/FERRAMENTAS NECESSÁRIAS EM SUAS MÁQUINAS:
+1) PYTHON
+2) GIT no terminal: 
+3) PIP (Python Install Package)
+4) DEPOIS QUE O PIP ESTIVER INSTALADO, INSTALAR: virtualenv
