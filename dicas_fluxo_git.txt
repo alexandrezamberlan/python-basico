@@ -21,5 +21,3 @@
     1o) ir para o diretório do projeto clonado e salvo na máquina
     2o) digitar:
     git pull orgin master
-
-
