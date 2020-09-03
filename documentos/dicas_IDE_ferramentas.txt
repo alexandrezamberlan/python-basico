@@ -10,8 +10,7 @@ IDES para Python
 
 QUEM ESTÁ COMEÇANDO AGORA PROGRAMAR PYTHON-DJANGO NO WINDOWS 10
 1) baixar e instalar o Python da loja Microsoft
-2) baixar e instalar o PyCharm ou VSCode
-
+2) baixar e instalar o PyCharm
 
 QUEM ESTÁ COMEÇANDO AGORA PROGRAMAR PYTHON-DJANGO NO LINUX
 1) usar o apt-get
@@ -27,3 +26,6 @@ APLICATIVOS/FERRAMENTAS NECESSÁRIAS EM SUAS MÁQUINAS:
     - Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     - venv\Scripts\activate -> ATIVAÇÃO DA VENV
    
+    LINUX/OSX
+    - virtualenv -p python3 venv (CRIAR venv)
+    - source venv/bin/activate
