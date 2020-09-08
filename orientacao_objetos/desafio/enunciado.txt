@@ -14,6 +14,7 @@ atas e usuáriosausentes. Os dados produzidos vão ir para uma lista.
 
 Estrutura de dados (classes e arquivos/imports)
 
+Dica de leitura: https://docs.python.org/pt-br/3/tutorial/classes.html
 
 Observaçoes:
 - se usarmos arquivos separados, como realizar importações
