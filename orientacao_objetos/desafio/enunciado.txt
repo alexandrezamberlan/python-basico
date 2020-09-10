@@ -4,7 +4,7 @@ Sistema de gestão de ATAS
     ou informação. O texto tem um cabeçalho data, hora, pauta e integrantes da reunião. E se foi realizado
     uma convação, é necessário apontar ou indicar os ausentes.
 
-    Ata: data, hora, local, pauta, redator, texto, validada (CRU)
+    Ata: numero, data, hora, local, pauta, redator, integrantes, texto, validada (CRU)
     Usuário: matricula, nome, tipo (leitor ou redator), email (CRUD)
 
     Dinâmica: Menu (Gestão de usuários; Gestão de atas; Sair)
