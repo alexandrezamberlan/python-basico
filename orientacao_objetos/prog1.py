@@ -30,7 +30,7 @@ class Pessoa:
     
     #equivalente a sobreescrita do toString em Java
     def __str__(self):
-        return "%s - %s" % self.nome, self.idade
+        return "%s - %s" % (self.nome, self.idade)
 
 
 class Aluno(Pessoa):    #deve herdar de Pessoa e adicionar o atributo sexo no construtor

@@ -1,0 +1,21 @@
+Sistema de gestão de ATAS 
+    Ata é um texto produzido numa reunião oficial/formal em que um redator (secretária/coordenador)
+    anota tudo que foi dito, informado, perguntado, criticado, bem como quem produziu tal questionamento
+    ou informação. O texto tem um cabeçalho data, hora, pauta e integrantes da reunião. E se foi realizado
+    uma convação, é necessário apontar ou indicar os ausentes.
+
+    Ata: data, hora, local, pauta, redator, texto, validada (CRU)
+    Usuário: matricula, nome, tipo (leitor ou redator), email (CRUD)
+
+    Dinâmica: Menu (Gestão de usuários; Gestão de atas; Sair)
+
+Desafio de hoje: Modelar as classes, atributos e métodos para esse sistema; Criar um menu no console para gerenciar
+atas e usuáriosausentes. Os dados produzidos vão ir para uma lista.
+
+Estrutura de dados (classes e arquivos/imports)
+
+Dica de leitura: https://docs.python.org/pt-br/3/tutorial/classes.html
+
+Observaçoes:
+- se usarmos arquivos separados, como realizar importações
+- se usarmos tipos data, time, text, como atribuir no construtor

@@ -1,0 +1,16 @@
+Framework é um conjunto de pacotes ou modelos já testados, ou seja, estão consolidados que podem
+ser reutilizados.
+
+API contém Frameworks
+
+Vantagem principal de usar Frameworks é não sair do ZERO. Por exemplo, na computação;
+    - Bootstrap para camada de comunicação com o usuário ou template (html e css)
+    - Django para aplicações Python-Web
+        - Trabalha com o conceito MVT (Model-View-Template)
+            - Model: persistência (Orientação a Objetos e Banco de Dados)
+            - View: regra de negócio (o que será exibido, restrições, funções do que será exibido)
+            - Template: camada de html e css (aqui entra o Bootstrap)
+        - Organiza a estrutura de pastas/diretórios e arquivos de configuração
+
+    - Hibernate para Java
+        - framework para comunicação aplicações Java com diferentes banco de dados
