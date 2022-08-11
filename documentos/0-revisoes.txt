@@ -1,8 +1,0 @@
-Ambiente de programação Python-Django
-    1) pip - gerenciador de pacotes para desenvolvimento Python 
-        1.1) virtualenv - ambientes/containers/docker que possuem características individuais
-             numa pasta, por exemplo, versões de Python, pacotes de drivers, ...
-        1.2) Django - framework de desenvolvimento web-python com integração facilitada à BDs
-        1.3) Bootstrap - framework para a camada TEMPLATE/CONTROLLER, facilitando a apresentação
-             de dados em html, css, ...
-    2) Python 3.6 para cima

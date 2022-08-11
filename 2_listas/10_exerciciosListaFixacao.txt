@@ -1,0 +1,9 @@
+1) Fazer um programa em Python que armazene números numa lista de inteiros. Na sequência, ordenar a lista e exibir
+o número mais ao centro.
+
+2) Fazer um programa em Python que armazene números numa lista de inteiros gerados automaticamente pelo computador. 
+Na sequência, contar e mostrar quantos dos números são pares e quantos são ímpares.
+
+3) Fazer um programa em Python que armazene nome de pessoas digitado por usuário. O programa deve transformar para 
+maiúsculo antes de armazenar numa lista de nomes. Na sequência, exbir a lista de todos os nomes, além da quantidade
+de nomes cadastrados.

@@ -1,0 +1,43 @@
+Orientação a Objetos - https://www.w3schools.com/python/python_classes.asp
+    - Paradigma ou uma forma de 'pensar' um sistema/programa
+        - Classes e seus Objetos
+            - Classes são os tipos de dados com atributos/propriedades e serviços/métodos
+            - Objetos são os elementos ou instâncias ou exemplos da classe
+
+        - Trabalha com a ideia de terceirização
+            - invocar serviços (publicos)
+
+Classe ou Categoria define os atributos/propriedades que os objetos vão ter e 
+os serviços/métodos que os objetos saberão executar.
+Classe é como se fosse um tipo
+
+class Inflacao:
+    valor = 0
+    mes = ""
+    ano = 0
+
+    #construtor vazio - cria um objeto na memória do tipo da classe
+    def __init__(self):
+        pass
+
+    #construtor não vazio, que cria um objeto ja com valores para os atributos
+    def __init__(self, v, m, a):
+        self.valor = v
+        self.mes = m
+        self.ano = a
+
+
+mes1 = Inflacao() //construir com o método construtor
+mes1.valor = 7.6
+mes1.mes = "Janeiro"
+mes1.ano = 2022
+
+mes2 = Inflacao()
+mes2.valor = 9.4
+mes2.mes = "Fevereiro"
+mes2.ano = 2022
+
+lista = []
+lista.append(mes1)
+lista.append(mes2)
+lista.append( Inflacao(4.3, "Março", 2022) )
