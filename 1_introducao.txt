@@ -2,12 +2,26 @@ Sejam bem vindos à disciplina Programação - PYTHON
 
 Sugestão de site para aprender Python: https://www.w3schools.com/python/
 
-O que é uma linguagem?
 
-Para que serve uma linguagem?
+O que é preciso saber para começar a programar:
 
-Linguagens artificiais de computadores são utilizadas para:
+- O que é uma linguagem?
+
+- Para que serve uma linguagem?
+
+- O que compõe uma linguagem?
+
+- O que é um código fonte?
+
+- O que é e para que serve uma IDE?
+
 
 Em Python há instruções:
-1) básicas: escrita (print), leitura (input) e atribuição (=)
-2) controle: seleção (if), repetição (for)
+
+1) básicas: 
+	escrita (print), 
+	leitura (input) e 
+	atribuição (=)
+2) controle: 
+	seleção (if), 
+	repetição (for)
