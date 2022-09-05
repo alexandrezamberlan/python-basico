@@ -23,8 +23,10 @@ Grupo A (alunos iniciantes em programação Python) e Grupo B (alunos da área d
 
 ## Grupo B
 
-1. Faça um Programa que leia dados glicêmicos de um arquivo .txt conforme o exemplo:
+1. Faça um Programa que leia dados glicêmicos de um arquivo .txt (dados um abaixo do outro) conforme o exemplo:
+
 123@21/09/2021@8:12
+
 89@22/09/2021@7:50
 ...
 
