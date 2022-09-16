@@ -6,6 +6,7 @@ Grupo A (alunos iniciantes em programação Python) e Grupo B (alunos da área d
 ## Grupo A
 
 1. Faça um Programa que peça dois números e imprima o maior deles.
+
 2. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
 3. Faça um Programa que receba um nome completo de uma pessoa e verifique se seu sobrenome contém 'Olveira'.
    Se ocorrer 'Oliveira' imprimir "Nome contém sobrenome Oliveira", caso contrário, imprimir "Nome não contém Oliveira"
