@@ -1,0 +1,5 @@
+#relação de obras que devem ficar uma em cada linha
+MOREIRA, O.; PEROBELLI, J. Uma revisão profunda sobre Python. Santa Maria: UFN, 2019.
+STEL, S. A biomedicina sob a tutela do Python. Caçapava do Sul: Las Grotas, 2022.
+VERONESE, P.; STEL, S. A arte de superar com Python. Caçapava do Sul: Las Grotas, 2022.
+ZAMBERLAN, A. Uma história sobre Python. Santa Maria: UFN, 2018.
