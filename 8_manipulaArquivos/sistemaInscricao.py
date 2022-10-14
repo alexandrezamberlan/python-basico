@@ -18,6 +18,17 @@ class Pessoa:
 lista_inscritos = []
 nome_arquivo_inscritos = "inscritos.csv"
 
+#abrir o arquivo de inscritos.csv e popular a lista_inscritos
+try:
+    with open(nome_arquivo_inscritos, "r", encoding='utf8') as procurador:
+        for linha in procurador:
+            dados_linha = linha.split(';')
+            pessoa = Pessoa(dados_linha[0], dados_linha[1], dados_linha[2])
+            lista_inscritos.append(pessoa)
+except:
+    pass
+
+
 while (True):
     print("MENU")
     print("1 - Realizar inscrição")
