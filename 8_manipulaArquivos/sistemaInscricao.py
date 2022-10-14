@@ -14,7 +14,22 @@ class Pessoa:
         nomes = self.nome.split(" ")
         return nomes[-1]        
     
+
+
+#metodo do programa principal
+def valida_nome_completo(nome):
+    nomes = nome.split(" ")
+    if (len(nomes) <= 1):
+        return False
+    else:
+        return True
     
+def valida_email(email):
+    if (not email.__contains__("@") or len(email) < 10):
+        return False
+    return True
+
+
 lista_inscritos = []
 nome_arquivo_inscritos = "inscritos.csv"
 
@@ -38,7 +53,34 @@ while (True):
 
     if (opcao == 1):
         print("INSCRIÇÃO")
+        while (True):
+            nome = input("Digite nome completo: ").upper()
+            if (valida_nome_completo(nome) == True):
+                break               
         
+        while (True):
+            email = input("Digite email da pessoa: ")
+            if (valida_email(email) == True):
+                break
+        
+        while (True):
+            matricula = input("Digite a matrícula da pessoa")
+            if (len(matricula) >= 5):
+                break
+            
+        pessoa = Pessoa(nome,email,matricula)
+        
+        #grava na lista
+        lista_inscritos.append(pessoa)
+        
+        #grava no arquivo
+        try:
+            with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
+                linha = nome + ";" + email + ";" + matricula + "\n"
+                procurador.write(linha)
+                print("passseiiiii")
+        except:
+            print("Problemas para gravar a inscrição no arquivo!")
         
     elif (opcao == 2):
         print("LISTAGEM INSCRITOS")
