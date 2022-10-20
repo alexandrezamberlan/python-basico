@@ -31,7 +31,7 @@ def valida_email(email):
 
 
 lista_inscritos = []
-nome_arquivo_inscritos = "inscritos.csv"
+nome_arquivo_inscritos = ".\8_manipulaArquivos\inscritos.csv"
 
 #abrir o arquivo de inscritos.csv e popular a lista_inscritos
 try:
@@ -40,6 +40,7 @@ try:
             dados_linha = linha.split(';')
             pessoa = Pessoa(dados_linha[0], dados_linha[1], dados_linha[2])
             lista_inscritos.append(pessoa)
+        print("Base de dados conectada....")
 except:
     pass
 
@@ -64,7 +65,7 @@ while (True):
                 break
         
         while (True):
-            matricula = input("Digite a matrícula da pessoa")
+            matricula = input("Digite a matrícula da pessoa: ")
             if (len(matricula) >= 5):
                 break
             
@@ -78,12 +79,16 @@ while (True):
             with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
                 linha = nome + ";" + email + ";" + matricula + "\n"
                 procurador.write(linha)
-                print("passseiiiii")
+
         except:
             print("Problemas para gravar a inscrição no arquivo!")
         
     elif (opcao == 2):
         print("LISTAGEM INSCRITOS")
+        for pessoa in lista_inscritos:
+            print("Matrícula: ", pessoa.matricula)
+            print("Nome: ", pessoa.nome)
+            print("________________________")
         
     elif (opcao == 3):
         print("Obrigado por usar o sistema")
