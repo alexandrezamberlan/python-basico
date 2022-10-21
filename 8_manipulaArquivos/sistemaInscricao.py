@@ -1,5 +1,7 @@
 from __future__ import with_statement
 
+import os
+
 class Pessoa:
     def __init__(self, nome, email, matricula):
         self.nome = nome
@@ -16,7 +18,7 @@ class Pessoa:
     
 
 
-#metodo do programa principal
+#metodos do programa principal
 def valida_nome_completo(nome):
     nomes = nome.split(" ")
     if (len(nomes) <= 1):
@@ -28,6 +30,12 @@ def valida_email(email):
     if (not email.__contains__("@") or len(email) < 10):
         return False
     return True
+
+def jaCadastrado(matricula, lista):
+    for pessoa in lista:
+        if (matricula == pessoa.matricula):
+            return True
+    return False
 
 
 lista_inscritos = []
@@ -46,6 +54,7 @@ except:
 
 
 while (True):
+    os.system("cls")
     print("MENU")
     print("1 - Realizar inscrição")
     print("2 - Listar inscritos")
@@ -71,20 +80,22 @@ while (True):
             
         pessoa = Pessoa(nome,email,matricula)
         
-        #grava na lista
-        lista_inscritos.append(pessoa)
-        
-        #grava no arquivo
-        try:
-            with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
-                linha = nome + ";" + email + ";" + matricula + "\n"
-                procurador.write(linha)
-
-        except:
-            print("Problemas para gravar a inscrição no arquivo!")
-        
+        #grava na lista se a matrícula não estiver lá
+        if (jaCadastrado(matricula, lista_inscritos)):
+            print("Esta pessoa com esta matrícula já está inscrita")
+        else:
+            #granva na lista
+            lista_inscritos.append(pessoa)
+            #grava no arquivo
+            try:
+                with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
+                    linha = nome + ";" + email + ";" + matricula + "\n"
+                    procurador.write(linha)
+            except:
+                print("Problemas para gravar a inscrição no arquivo!")
+            
     elif (opcao == 2):
-        print("LISTAGEM INSCRITOS")
+        print("LISTAGEM INSCRITOS\n")
         for pessoa in lista_inscritos:
             print("Matrícula: ", pessoa.matricula)
             print("Nome: ", pessoa.nome)
@@ -95,4 +106,6 @@ while (True):
         break
     else:
         print("Opção inválida!")
+    
+    os.system("pause")
 
