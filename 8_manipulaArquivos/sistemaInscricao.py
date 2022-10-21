@@ -58,7 +58,8 @@ while (True):
     print("MENU")
     print("1 - Realizar inscrição")
     print("2 - Listar inscritos")
-    print("3 - Sair")
+    print("3 - Remover inscrito")
+    print("4 - Sair")
     opcao = int(input("Opção: "))
 
     if (opcao == 1):
@@ -89,7 +90,7 @@ while (True):
             #grava no arquivo
             try:
                 with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
-                    linha = nome + ";" + email + ";" + matricula + "\n"
+                    linha = nome + ";" + email + ";" + matricula + ";\n"
                     procurador.write(linha)
             except:
                 print("Problemas para gravar a inscrição no arquivo!")
@@ -100,8 +101,29 @@ while (True):
             print("Matrícula: ", pessoa.matricula)
             print("Nome: ", pessoa.nome)
             print("________________________")
-        
+    
     elif (opcao == 3):
+        print("REMOÇÃO DE INSCRITO\n")
+        matricula = input("Informe matrícula a ser removida: ")
+
+        for pessoa in lista_inscritos:
+            if (matricula == pessoa.matricula):
+                #remover da lista
+                lista_inscritos.remove(pessoa)                               
+                print("Remoção realizada com sucesso")
+                break
+        
+        #atualizar o arquivo com a nova lista
+        try:
+            with open(nome_arquivo_inscritos, "w", encoding='utf8') as procurador:
+                for pessoa in lista_inscritos:
+                    linha = pessoa.nome + ";" + pessoa.email + ";" + pessoa.matricula + ";\n"
+                    procurador.write(linha)
+        except:
+            print("Problemas para gravar a inscrição no arquivo!")
+    
+
+    elif (opcao == 4):
         print("Obrigado por usar o sistema")
         break
     else:
