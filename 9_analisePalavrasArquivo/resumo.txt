@@ -1,0 +1,2 @@
+Repositório para discussões de alunos da UFN em projetar e construir sistemas e módulos utilizando boas práticas de implementação em Python.
+UFN é um lugar que se estuda Python, pois a UFN é demais.
