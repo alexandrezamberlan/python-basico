@@ -52,7 +52,7 @@ while (True):
     opcao = int(input("Opção: "))
 
     if (opcao == 1):
-        print("INSCRIÇÃO")
+        print("\nINSCRIÇÃO\n")
         while (True):
             nome = input("Digite nome completo: ").upper()
             if (valida_nome_completo(nome) == True):
@@ -64,30 +64,33 @@ while (True):
                 break
         
         while (True):
-            matricula = input("Digite a matrícula da pessoa")
+            matricula = input("Digite a matrícula da pessoa: ")
             if (len(matricula) >= 5):
                 break
             
         pessoa = Pessoa(nome,email,matricula)
         
-        #grava na lista
-        lista_inscritos.append(pessoa)
-        
-        #grava no arquivo
-        try:
-            with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
-                linha = nome + ";" + email + ";" + matricula + "\n"
-                procurador.write(linha)
-                print("passseiiiii")
-        except:
-            print("Problemas para gravar a inscrição no arquivo!")
-        
+        if (lista_inscritos.__contains__(pessoa)):
+            print("Pessoa já inscrita no sistema!")
+        else:
+            #grava na lista desde que não cadastrado previamente
+            lista_inscritos.append(pessoa)
+            #grava no arquivo
+            try:
+                with open(nome_arquivo_inscritos, "a", encoding='utf8') as procurador:
+                    linha = nome + ";" + email + ";" + matricula + "\n"
+                    procurador.write(linha)
+            except:
+                print("Problemas para gravar a inscrição no arquivo!")
+            
     elif (opcao == 2):
-        print("LISTAGEM INSCRITOS")
+        print("\nLISTAGEM INSCRITOS\n")
+        for pessoa in lista_inscritos:
+            print('Nome:\t\t', pessoa.nome, '\nEmail:\t\t' , pessoa.email, '\nMatrícula:\t', pessoa.matricula,"\n")
         
     elif (opcao == 3):
-        print("Obrigado por usar o sistema")
+        print("\nObrigado por usar o sistema")
         break
     else:
-        print("Opção inválida!")
+        print("\nOpção inválida!")
 
