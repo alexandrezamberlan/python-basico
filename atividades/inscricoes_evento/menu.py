@@ -1,6 +1,6 @@
 import os
 
-from util import inscricao, conexao_base
+from util import inscricao, conexao_base, listagem
 
 lista_inscritos = [] #guardar a matrícula
 conexao_base(lista_inscritos)
@@ -22,6 +22,7 @@ while (True):
     elif op == '2':
         print('Listagem de inscritos')
         #chamar o metodo de listagem
+        listagem()
     elif op == '3':
         print('Entrada')
         #chamar o metodo de entrada no evento

@@ -21,3 +21,14 @@ def inscricao(lista):
         escritor = open('inscricoes.dat','a')
         escritor.write(matricula + ';' + nome + ';' + email + '\n')
         escritor.close()
+
+def listagem():
+    try:
+        leitor = open('inscricoes.dat','r',encoding='utf8')
+        for linha in leitor:
+            vetor_linha = linha.split(';')
+            print('Nome:',vetor_linha[1],'Matrícula:',vetor_linha[0])
+
+        leitor.close()
+    except:
+        print('Sem inscrições até o momento')
