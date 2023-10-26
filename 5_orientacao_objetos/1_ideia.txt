@@ -1,3 +1,6 @@
+Sugestão de site para estudo:
+https://pythonacademy.com.br/blog/introducao-a-programacao-orientada-a-objetos-no-python
+
 Orientação a Objetos - https://www.w3schools.com/python/python_classes.asp
     - Paradigma ou uma forma de 'pensar' um sistema/programa
         - Classes e seus Objetos
