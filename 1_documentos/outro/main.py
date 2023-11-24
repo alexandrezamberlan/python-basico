@@ -2,6 +2,7 @@ import os
 
 from noticia import Noticia
 from persistencia import Persistencia
+from metodos import Metodos
 
 lista_noticias = []
 
@@ -14,22 +15,23 @@ while (True):
     print('MENU DE NOTÍCIAS')
     print('1 - Cadastrar')
     print('2 - Alterar')
-    print('3 - Pesquisar')
+    print('3 - Listar')
     print('4 - Remover')
     print('5 - Sair')
     opcao = input('Opção: ')
 
     if (opcao == '1'):
-        pass
+        identificador_atual = Metodos.cadastrar(lista_noticias, identificador_atual)
     elif (opcao == '2'):
-        pass
+        Metodos.alterar(lista_noticias)
     elif (opcao == '3'):
-        pass
+        Metodos.listar(lista_noticias)
     elif (opcao == '4'):
-        pass
+        Metodos.remover(lista_noticias)
     elif (opcao == '5'):
         break
     else:
         print('Opção inválida!!!!')
 
     os.system('pause')
+
