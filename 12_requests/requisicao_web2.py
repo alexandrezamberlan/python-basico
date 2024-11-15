@@ -1,36 +1,47 @@
+#pip install install requests
+
 import requests
 
-def get_exchange_rate(base_currency, target_currency):
-    # Substitua pelo seu endpoint da API (Exemplo: ExchangeRate-API)
-    api_url = f"https://v6.exchangerate-api.com/v6/64b07c933c8d4d2936e1e05d/latest/{base_currency}"
+# Função para buscar o clima de uma cidade
+def pegar_clima(cidade, api_key):
+    # URL da API do OpenWeatherMap com o parâmetro 'q' para cidade e 'appid' para chave de API
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={cidade},GBP&appid={api_key}&units=metric&lang=pt_br"
     
-    # Enviando a requisição GET
-    response = requests.get(api_url)
+    # Enviar a requisição GET
+    resposta = requests.get(url)
     
-    # Verificando se a requisição foi bem-sucedida
-    if response.status_code == 200:
-        data = response.json()
+    # Verificar se a requisição foi bem-sucedida
+    if resposta.status_code == 200:
+        dados = resposta.json()
         
-        # Verificando se a moeda alvo está presente
-        if target_currency in data['conversion_rates']:
-            return data['conversion_rates'][target_currency]
-        else:
-            return f"Moeda alvo ({target_currency}) não encontrada."
+        # Extrair os dados relevantes
+        main = dados['main']
+        weather = dados['weather'][0]
+        wind = dados['wind']
+        
+        # Exibir as informações
+        print(f"Cidade: {cidade.capitalize()}")
+        print(f"Temperatura: {main['temp']}°C")
+        print(f"Temperatura Mínima: {main['temp_min']}°C")
+        print(f"Temperatura Máxima: {main['temp_max']}°C")
+        print(f"Condição: {weather['description'].capitalize()}")
+        print(f"Umidade: {main['humidity']}%")
+        print(f"Velocidade do vento: {wind['speed']} m/s")
+        print('-' * 40)
     else:
-        return "Erro ao buscar dados da API."
+        print(f"Erro ao obter dados para {cidade}: {resposta.status_code}")
 
-# Função para buscar cotações do dólar, euro e libra
-def get_all_exchange_rates():
-    base_currency = "USD"  # Dólar Americano
-    
-    # Códigos das moedas
-    currencies = ["EUR", "GBP"]
-    
-    print(f"Cotações base: {base_currency}")
-    
-    for currency in currencies:
-        rate = get_exchange_rate(base_currency, currency)
-        print(f"{currency}: {rate}")
+# Função para obter o clima de várias cidades
+def pegar_clima_cidades(cidades, api_key):
+    for cidade in cidades:
+        pegar_clima(cidade, api_key)
 
 if __name__ == "__main__":
-    get_all_exchange_rates()
+    # Substitua 'YOUR_API_KEY' pela chave que você obteve ao se registrar na API do OpenWeatherMap
+    api_key = '57f02dc11685a9611b42a5a22012380c'
+
+    # Lista de cidades brasileiras para as quais você deseja obter o clima
+    cidades = ['Santa Maria', 'São Paulo', 'Brasília']
+
+    # Buscar o clima para as cidades
+    pegar_clima_cidades(cidades, api_key)
